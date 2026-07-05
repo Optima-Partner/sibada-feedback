@@ -9,7 +9,9 @@
       "secUid": "MS4wLjABAAAAO0SPfzp7u6mHWJrXclt93YrOcKr6F_AUiS-62VodPe2kKnDvY_VbajwqhGO2UlFN",
       "profile_ok": true,
       "videos_fetched": 465,
-      "profile_total_videos": 465
+      "profile_total_videos": 465,
+      "videos_downloaded": 465,
+      "download_size_mb": 2815
     },
     {
       "region": "hangzhou",
@@ -18,7 +20,9 @@
       "secUid": "MS4wLjABAAAAacQLuvWCPETI8MFA7TfWQCm4P57d3HeMMqsezYlEDO8",
       "profile_ok": true,
       "videos_fetched": 12,
-      "profile_total_videos": 12
+      "profile_total_videos": 12,
+      "videos_downloaded": 12,
+      "download_size_mb": 408
     },
     {
       "region": "hangzhou",
@@ -27,7 +31,9 @@
       "secUid": "MS4wLjABAAAA82tvLAFUSXbd3to1R7RCKNsuTOyQEKncBrFBh8BfiQADCuXPJC7E5Zv-0SeEeJSr",
       "profile_ok": true,
       "videos_fetched": 11,
-      "profile_total_videos": 11
+      "profile_total_videos": 11,
+      "videos_downloaded": 11,
+      "download_size_mb": 767
     },
     {
       "region": "hangzhou",
@@ -36,7 +42,9 @@
       "secUid": "MS4wLjABAAAAr5revEMw-lv1C4l9zKL23nmxGyiH-o9F6k4vHH1v0GY",
       "profile_ok": true,
       "videos_fetched": 10,
-      "profile_total_videos": 10
+      "profile_total_videos": 10,
+      "videos_downloaded": 10,
+      "download_size_mb": 618
     },
     {
       "region": "hangzhou",
@@ -45,7 +53,9 @@
       "secUid": "MS4wLjABAAAAgX0a6zOVZZoie2Me3Abtd3h0UMgXJgf9v1d1ma3-a7k",
       "profile_ok": true,
       "videos_fetched": 9,
-      "profile_total_videos": 9
+      "profile_total_videos": 9,
+      "videos_downloaded": 9,
+      "download_size_mb": 419
     },
     {
       "region": "urumqi",
@@ -54,7 +64,9 @@
       "secUid": "MS4wLjABAAAAdfNyrd_qj9GZwkgD5VJhz8dToVirpjTwIqUEi6DWqUPy9zHWrI2KAQGN_IhIq-Id",
       "profile_ok": true,
       "videos_fetched": 124,
-      "profile_total_videos": 124
+      "profile_total_videos": 124,
+      "videos_downloaded": 124,
+      "download_size_mb": 3475
     },
     {
       "region": "urumqi",
@@ -63,7 +75,9 @@
       "secUid": "MS4wLjABAAAAw1yHe8uY6Y_sMb-tx7s-X08MgdxfHLvSwOvnubUGGRQ",
       "profile_ok": true,
       "videos_fetched": 134,
-      "profile_total_videos": 134
+      "profile_total_videos": 134,
+      "videos_downloaded": 134,
+      "download_size_mb": 3084
     },
     {
       "region": "urumqi",
@@ -72,7 +86,9 @@
       "secUid": "MS4wLjABAAAA1DIqxx9VtnG0pQwyCdL7h4baPkRZ7O2fW-nnwjnXJvg",
       "profile_ok": true,
       "videos_fetched": 135,
-      "profile_total_videos": 135
+      "profile_total_videos": 135,
+      "videos_downloaded": 135,
+      "download_size_mb": 2617
     },
     {
       "region": "urumqi",
@@ -81,7 +97,15 @@
       "secUid": "MS4wLjABAAAAxQe9Vrb81L2OZrC_LVCokNPSXTz2v1RSiA2y1IKMdqA",
       "profile_ok": true,
       "videos_fetched": 13,
-      "profile_total_videos": 13
+      "profile_total_videos": 13,
+      "videos_downloaded": 13,
+      "download_size_mb": 439
     }
-  ]
+  ],
+  "download": {
+    "completed_at": "2026-07-05",
+    "total_files": 913,
+    "total_size_gb": 14.6,
+    "note": "无水印原画，存本地 videos/ 目录（.gitignore 排除）；其中 11 条为图文帖，下载内容为背景音频"
+  }
 }

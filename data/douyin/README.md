@@ -30,7 +30,14 @@
 
 `crawl-summary.json` 记录本次抓取的账号清单与完整性核对（videos_fetched 与 profile 的 totalVideos 全部一致）。
 
-## 注意
+## 视频文件
 
-- `videoUrl` 是抖音 CDN 的**临时签名地址，会过期**，不能长期使用；需要视频文件时用 `scout douyin video-download <视频id>` 现取
-- 后续步骤（issue #10）：视频转写/字幕提取 → 结构化入企业知识库
+913 条视频已于 2026-07-05 全量下载完成（无水印原画，共 14.6GB），存放在各账号目录的 `videos/<视频id>.mp4` 下，**因体积原因不入 git**（见 `.gitignore`）。需要重新下载时运行下载脚本即可断点续传。
+
+- 其中 11 条是图文帖（duration=0），下载到的是背景音频而非视频
+- 元数据里的 `videoUrl` 是抖音 CDN 的**临时签名地址，会过期**；需要新鲜链接时用 `scout douyin video-download <视频id>` 现取
+- 注意：Optima token 有效期 1 小时，长任务需定期用包内 `refreshToken()` 续期
+
+## 后续步骤（issue #10）
+
+视频转写/字幕提取 → 结构化入企业知识库
