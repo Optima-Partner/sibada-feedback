@@ -1,0 +1,51 @@
+{
+  "crawled_at": "2026-07-06",
+  "source": "scout douyin (tikhub)",
+  "accounts": [
+    {
+      "region": "nanjing",
+      "name": "钱易",
+      "slug": "qianyi",
+      "secUid": "MS4wLjABAAAA3H8I_2J5vzxUyFvXRC95zKVCjymVCVf_ZTDveKDuET-8zre01xSyY-xTEUA7xwGj",
+      "profile_ok": true,
+      "videos_fetched": 188,
+      "profile_total_videos": 188
+    },
+    {
+      "region": "nanjing",
+      "name": "舒黎",
+      "slug": "shuli",
+      "secUid": "MS4wLjABAAAAaM2msON6jEX9XeyIanstn7B4561zVnvTMkUwWGKlFIU",
+      "profile_ok": true,
+      "videos_fetched": 566,
+      "profile_total_videos": 567
+    },
+    {
+      "region": "nanjing",
+      "name": "沈鉴东",
+      "slug": "shenjiandong",
+      "secUid": "MS4wLjABAAAA7vMLD1TCpuSyubzjb-dACrf5fiPwmNGYaAA6RdbS1MQ",
+      "profile_ok": true,
+      "videos_fetched": 55,
+      "profile_total_videos": 55
+    },
+    {
+      "region": "nanjing",
+      "name": "孟艳",
+      "slug": "mengyan",
+      "secUid": "MS4wLjABAAAALy1Kfcmhv7NMZxeouZCocXSlyZ2sDiaufnOq8Kog1dQ",
+      "profile_ok": true,
+      "videos_fetched": 110,
+      "profile_total_videos": 110
+    },
+    {
+      "region": "nanjing",
+      "name": "王菁",
+      "slug": "wangjing",
+      "secUid": "MS4wLjABAAAAbFVPFmPhOAPw7XvToEFdrbLIQBkh_QrczTkXh6Lnub_nsFJRz7GFAepJrXzPkzh8",
+      "profile_ok": true,
+      "videos_fetched": 1,
+      "profile_total_videos": 1
+    }
+  ]
+}
