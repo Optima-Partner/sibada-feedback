@@ -188,15 +188,24 @@ def _pending_line(pending, name_map):
     return "、".join(parts) if parts else ""
 
 
+def _region_breakdown(rows):
+    """按地区动态汇总已入库医生数：'杭州 5 + 乌鲁木齐 4 + 南京 5'（不写死地区）。"""
+    order, by_region = [], {}
+    for r in rows:
+        rc = r["region_cn"]
+        if rc not in by_region: order.append(rc); by_region[rc] = 0
+        by_region[rc] += 1
+    return " + ".join(f"{rc} {by_region[rc]}" for rc in order)
+
+
 def write_readme(kb, rows, global_tags, tot_v, pending, name_map):
-    n_h = sum(1 for r in rows if r["region"] == "hangzhou")
-    n_u = sum(1 for r in rows if r["region"] == "urumqi")
+    bd = _region_breakdown(rows)
     pend = _pending_line(pending, name_map)
     M = ["# 口播内容层 — 医生科普内容", "",
          "本目录是知识库的**第三层：口播内容层**，与法规层、咨询层并列。", "",
          "- **来源**：斯巴达合作医生在**公开抖音账号**发布的科普短视频，经 `scout douyin` 抓取 → `gen asr` 转写 → 生殖医学术语校对。",
          "- **用途**：**内容创作与选题参考**——看医生们讲过哪些选题、某医生的表达风格、某话题大家怎么科普，辅助写口播 / 做数字人脚本。",
-         f"- **规模**：{len(rows)} 位医生 / {tot_v} 条视频（杭州 {n_h} + 乌鲁木齐 {n_u}）。" + (f"{pend}待补。" if pend else ""), "",
+         f"- **规模**：{len(rows)} 位医生 / {tot_v} 条视频（{bd}）。" + (f"{pend}待补。" if pend else ""), "",
          "> ⚠ **重要边界**：本层是医生在**社交平台面向大众**的口播表达，为传播做过简化，且是 ASR 转写（校对后仍可能有识别误差）。",
          "> **不得当作临床或法规事实依据**——查法规请用法规层，查临床事实请用咨询层。本层只回答"
          "「某医生 / 我们的医生在公开视频里**讲过**什么、怎么讲」，不回答「事实上**应该**怎样」。", "",
@@ -247,11 +256,10 @@ def update_index(kb, rows, pending, name_map, tot_v, tot_text, tot_skip, tot_not
     # 「转写」= 有文本的条目 = 862+40=902；「有效/术语校对」= 正常口播 = 862（note 是幻觉不计校对）。
     n_transcribed = tot_text + tot_note
     n_valid = tot_text
-    n_h = sum(1 for r in rows if r["region"] == "hangzhou")
-    n_u = sum(1 for r in rows if r["region"] == "urumqi")
+    bd = _region_breakdown(rows)
     pend = _pending_line(pending, name_map)
     strows = [
-        f"| raw_md 口播文案 | ✅ {len(rows)} 位医生（杭州 {n_h} + 乌鲁木齐 {n_u}），{tot_v} 条视频，{n_transcribed} 条口播文字稿 + {tot_skip} 图文帖标记 |",
+        f"| raw_md 口播文案 | ✅ {len(rows)} 位医生（{bd}），{tot_v} 条视频，{n_transcribed} 条口播文字稿 + {tot_skip} 图文帖标记 |",
         f"| wiki/content 医生页 | ✅ {len(rows)} 页 + README（选题聚合 + 医生索引） |",
         f"| 术语校对 | ✅ {n_valid} 条有效口播经生殖医学术语校对（原始 ASR 保留在 sibada-feedback repo） |",
         f"| 幻觉/无口播标记 | ✅ {tot_note} 条疑似无口播 + {tot_skip} 图文帖已标 `⚠`，引用时排除 |",
