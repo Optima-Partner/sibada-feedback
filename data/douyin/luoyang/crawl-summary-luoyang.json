@@ -1,0 +1,87 @@
+{
+  "crawled_at": "2026-07-20",
+  "region": "luoyang",
+  "source": "scout douyin (tikhub)",
+  "pipeline_note": "下载用 playUrls(低码率)抽音后删除本地视频以提速; asr=gen asr(Groq whisper-large-v3-turbo); 校对=LLM+生殖科术语表(只修同音字)。初次抓取时 89 条因 Groq 限流未转写, 后续 quota 恢复后已全部补跑转写+校对。",
+  "accounts": [
+    {
+      "doctor": "李岩",
+      "slug": "liyan",
+      "secUid": "MS4wLjABAAAAlhyfmci5XRoPGQFPTurOmRqWqWq86VMOMyaLY6Feu7JMVT9HcVFB_aw1fhjO8W7k",
+      "name": "洛阳生殖专家李岩主任",
+      "username": "66527512600",
+      "followers": 4416,
+      "profile_total_videos": 292,
+      "videos_fetched": 292,
+      "imgtext_skipped": 3,
+      "transcribed": 289,
+      "corrected": 289,
+      "untranscribed_ratelimited": 0
+    },
+    {
+      "doctor": "李琳",
+      "slug": "lilin",
+      "secUid": "MS4wLjABAAAAJFbnTebOgWyqMdLv74xaLBY0_tyAWA8L0XQe0-cx-yzoAHVxefQpSq8PhnJIhCUy",
+      "name": "生殖科李琳医生",
+      "username": "21497534149",
+      "followers": 544,
+      "profile_total_videos": 111,
+      "videos_fetched": 111,
+      "imgtext_skipped": 2,
+      "transcribed": 109,
+      "corrected": 109,
+      "untranscribed_ratelimited": 0
+    },
+    {
+      "doctor": "李蕊蕊",
+      "slug": "liruirui",
+      "secUid": "MS4wLjABAAAAEggRXymS6fwxCG6v8zJwwPAMkyLx3ic_Thni1Qau_88",
+      "name": "生殖医生李蕊蕊",
+      "username": "343580220",
+      "followers": 862,
+      "profile_total_videos": 172,
+      "videos_fetched": 172,
+      "imgtext_skipped": 1,
+      "transcribed": 171,
+      "corrected": 171,
+      "untranscribed_ratelimited": 0
+    },
+    {
+      "doctor": "李红芳",
+      "slug": "lihongfang",
+      "secUid": "MS4wLjABAAAAO132lj7h7qN93r-n_lVEtvSoYk0Vq2iVuh9Bj4vEGbOxn7hDpux645YcQL6KQWAj",
+      "name": "生殖科李红芳医生",
+      "username": "songziguanyi73",
+      "followers": 114,
+      "profile_total_videos": 38,
+      "videos_fetched": 38,
+      "imgtext_skipped": 2,
+      "transcribed": 36,
+      "corrected": 36,
+      "untranscribed_ratelimited": 0
+    },
+    {
+      "doctor": "洛阳市妇幼保健院生殖医学科",
+      "slug": "luoyangfuyou",
+      "secUid": "MS4wLjABAAAAJig6q25X5mXtydjf8ZtrST92F8Bsf7rgDGf2zoMbNPE",
+      "name": "洛阳市妇幼保健院生殖医学科",
+      "username": "55571201063",
+      "followers": 1503,
+      "profile_total_videos": 295,
+      "videos_fetched": 295,
+      "imgtext_skipped": 2,
+      "transcribed": 293,
+      "corrected": 293,
+      "untranscribed_ratelimited": 0
+    }
+  ],
+  "totals": {
+    "videos": 908,
+    "transcribed": 898,
+    "corrected": 898,
+    "imgtext": 10,
+    "untranscribed_ratelimited": 0,
+    "coverage": "908/908"
+  },
+  "backfilled_at": "2026-07-21"
+}

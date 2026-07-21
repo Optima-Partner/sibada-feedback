@@ -1,0 +1,6 @@
+{
+  "note": "初次抓取时因 gen asr 上游(Groq Whisper)限流未恢复而未转写的视频 id (非内容/账号问题); 已于 2026-07-21 Groq quota 恢复后全部补跑转写+术语校对完成, 无残留未转写。",
+  "ratelimited_untranscribed": {},
+  "total": 0,
+  "backfilled_at": "2026-07-21"
+}
