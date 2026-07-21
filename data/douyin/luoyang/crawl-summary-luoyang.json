@@ -2,7 +2,7 @@
   "crawled_at": "2026-07-20",
   "region": "luoyang",
   "source": "scout douyin (tikhub)",
-  "pipeline_note": "下载用 playUrls(低码率)抽音后删除本地视频以提速; asr=gen asr(Groq whisper-large-v3-turbo); 校对=LLM+生殖科术语表(只修同音字)。未转写条目为 gen asr 上游(Groq)限流未恢复, 可后续 quota 恢复后补跑。",
+  "pipeline_note": "下载用 playUrls(低码率)抽音后删除本地视频以提速; asr=gen asr(Groq whisper-large-v3-turbo); 校对=LLM+生殖科术语表(只修同音字)。初次抓取时 89 条因 Groq 限流未转写, 后续 quota 恢复后已全部补跑转写+校对。",
   "accounts": [
     {
       "doctor": "李岩",
@@ -29,7 +29,7 @@
       "videos_fetched": 111,
       "imgtext_skipped": 2,
       "transcribed": 109,
-      "corrected": 108,
+      "corrected": 109,
       "untranscribed_ratelimited": 0
     },
     {
@@ -42,9 +42,9 @@
       "profile_total_videos": 172,
       "videos_fetched": 172,
       "imgtext_skipped": 1,
-      "transcribed": 168,
-      "corrected": 131,
-      "untranscribed_ratelimited": 3
+      "transcribed": 171,
+      "corrected": 171,
+      "untranscribed_ratelimited": 0
     },
     {
       "doctor": "李红芳",
@@ -56,9 +56,9 @@
       "profile_total_videos": 38,
       "videos_fetched": 38,
       "imgtext_skipped": 2,
-      "transcribed": 25,
-      "corrected": 25,
-      "untranscribed_ratelimited": 11
+      "transcribed": 36,
+      "corrected": 36,
+      "untranscribed_ratelimited": 0
     },
     {
       "doctor": "洛阳市妇幼保健院生殖医学科",
@@ -70,17 +70,18 @@
       "profile_total_videos": 295,
       "videos_fetched": 295,
       "imgtext_skipped": 2,
-      "transcribed": 218,
-      "corrected": 218,
-      "untranscribed_ratelimited": 75
+      "transcribed": 293,
+      "corrected": 293,
+      "untranscribed_ratelimited": 0
     }
   ],
   "totals": {
     "videos": 908,
-    "transcribed": 809,
-    "corrected": 771,
+    "transcribed": 898,
+    "corrected": 898,
     "imgtext": 10,
-    "untranscribed_ratelimited": 89,
-    "coverage": "819/908"
-  }
+    "untranscribed_ratelimited": 0,
+    "coverage": "908/908"
+  },
+  "backfilled_at": "2026-07-21"
 }

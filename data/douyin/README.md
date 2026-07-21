@@ -52,12 +52,12 @@
 |---|---|---|---|---|---|---|
 | 李岩 | 洛阳生殖专家李岩主任 | 4,416 | 292 | 289 | 289 | `luoyang/liyan/` |
 | 李琳 | 生殖科李琳医生 | 544 | 111 | 109 | 109 | `luoyang/lilin/` |
-| 李蕊蕊 | 生殖医生李蕊蕊 | 862 | 172 | 168 | 168 | `luoyang/liruirui/` |
-| 李红芳 | 生殖科李红芳医生 | 114 | 38 | 25 | 25 | `luoyang/lihongfang/` |
-| 科室号 | 洛阳市妇幼保健院生殖医学科 | 1,503 | 295 | 218 | 218 | `luoyang/luoyangfuyou/` |
+| 李蕊蕊 | 生殖医生李蕊蕊 | 862 | 172 | 171 | 171 | `luoyang/liruirui/` |
+| 李红芳 | 生殖科李红芳医生 | 114 | 38 | 36 | 36 | `luoyang/lihongfang/` |
+| 科室号 | 洛阳市妇幼保健院生殖医学科 | 1,503 | 295 | 293 | 293 | `luoyang/luoyangfuyou/` |
 
-- **视频 908 条**：转写 **809**、图文帖 10、术语校对 **809**（推荐入库用 `transcripts-corrected.json`），覆盖 **819/908 ≈ 90%**。
-- **未转写 89 条**：`gen asr` 上游（Groq Whisper）限流未恢复所致（非内容/账号问题；本批并行转写量大触发 Groq RPM/配额限制）。后续 Groq quota 恢复后，跑 `luoyang/*/videos.json` 里未在 `transcripts.json` 的 id 即可补齐。
+- **视频 908 条**：转写 **898**、图文帖 10、术语校对 **898**（推荐入库用 `transcripts-corrected.json`），覆盖 **908/908 = 100%**（全部可转写内容已转写并校对，剩余 10 条为无音频图文帖）。
+- **补跑记录**：初次抓取时 89 条因 `gen asr` 上游（Groq Whisper）限流未恢复而未转写（非内容/账号问题；本批并行转写量大触发 Groq RPM/配额限制）；后续 quota 恢复后已全部补跑转写 + 术语校对完成。
 - **提速**：本批下载改用 `playUrls`（低码率播放版）抽音后**删除本地视频**（asr 只需音频，原画下载 0.2MB/s 太慢；原画可用 `scout douyin video-download <id>` 随时重取），故 `luoyang/*/videos/` 为空。
 - **Token 续期**：改用 race-safe 文件锁（`refresh_token` 是轮转的，并发刷新会断链）。
 - 统计明细见 `crawl-summary-luoyang.json`。
