@@ -1,0 +1,2 @@
+# git worktrees (CLAUDE.md 全局约定: .worktrees/<branch-slug>/)
+.worktrees/
